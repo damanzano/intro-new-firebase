@@ -30,7 +30,7 @@ public class Ejecutable extends PApplet {
 		// Configurar la conexión
 		try {
 			FirebaseOptions options = new FirebaseOptions.Builder()
-					.setServiceAccount(new FileInputStream("src/main/resources/intro-redes-e7cc8877301b.json"))
+					.setServiceAccount(new FileInputStream("intro-redes-f721d3241013.json"))
 					.setDatabaseUrl("https://intro-redes.firebaseio.com/").build();
 			FirebaseApp.initializeApp(options);
 			
@@ -51,8 +51,8 @@ public class Ejecutable extends PApplet {
 		    public void onDataChange(DataSnapshot dataSnapshot) {
 		        Object post = dataSnapshot.getValue();
 		        System.out.println(post);
-		        //Bolita b = dataSnapshot.getValue(Bolita.class);
-		        //bolitas.add(b);
+		        Bolita b = dataSnapshot.getValue(Bolita.class);
+		        bolitas.add(b);
 		    }
 		    
 		    public void onCancelled(DatabaseError databaseError) {
