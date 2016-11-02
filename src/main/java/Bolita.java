@@ -21,4 +21,9 @@ public class Bolita {
 		this.y = y;
 	}
 
+	@Override
+	public String toString() {
+		return "Bolita [x=" + x + ", y=" + y + "]";
+	}
+
 }
